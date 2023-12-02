@@ -1,0 +1,349 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background-color: rgba(33, 33, 33, 1);
+}
+/*--------------------------------navbar styling----------------------------- */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #2a2828;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+    box-shadow: 0 0 10px solid rgba(18, 18, 18, 1);
+}
+.toggle-btn{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+.logo{
+    height: 30px;
+    margin: -10px 30px 0;
+}
+.search-box{
+    position: relative;
+    max-width: 600px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    border: 2px solid #2a2828;
+}
+.search-bar{
+    width: 85%;
+    height: 100%;
+    border: 2px solid #2a2828;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    background: #2a2828;
+    color:white;
+}
+
+.search-btn{
+    width:15%; 
+    height: 100%;
+    background: #2a2828;
+    border: 2px solid #2a2828;
+    padding: 5px 0;
+    border-left: none;
+}
+.search-btn img{
+    margin-top:-11px;
+}
+.mic-icon{
+    margin-left:20px;
+}
+.user-options{
+    /* height: 35px; */
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.user-dp{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*-------------------------------- left sidebar -------------------------------*/
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    padding-right: 10px;
+    position:fixed;
+    top:100px;
+    padding-left: 2%;
+    background: #2a2828;
+    overflow:auto;
+    
+}
+.side-bar::-webkit-scrollbar{
+    display: none;
+}
+
+.side-bar a{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links img{
+    margin-right: 20px;
+    width:32px;
+}
+
+.links:hover
+{
+    background: rgba(190, 186, 186, 0.53);
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(190, 186, 186, 0.53);
+    margin: 20px 0;
+}
+/* subscription left side bar part styling */
+.subscribed-list h3{
+    font-size: 20px;
+    margin:20px 0;
+    color:rgba(170, 170, 170, 1);
+    
+}
+.subscribed-list a{
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+    width:fit-content;
+    flex-wrap: wrap;
+}
+.subscribed-list a img{
+    width:46px;
+    margin-right: 60px;
+}
+#more{
+    border-bottom: 1px solid rgba(190, 186, 186, 0.53);
+}
+.more-info h3{
+    font-size: 15px;
+    margin:20px 0;
+    color:rgba(170, 170, 170, 1);
+
+}
+.more-info a{
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+    width:fit-content;
+    /* flex-wrap: wrap; */
+}
+.more-info a img{
+    width:46px;
+    margin-right: 60px;
+}
+/* code is in javascript */
+.small-sidebar{
+    width:5%;
+}
+.small-sidebar a p{
+    display: none;
+}
+.small-sidebar h3{
+    display: none;
+}
+.small-sidebar hr{
+    width:50%;
+    margin-bottom: 25px;
+}
+
+
+/*------------ filters styling -----------*/
+.filters{
+    position:fixed;
+    left:264px;
+    top:60px;
+    width:calc(100% -250px);
+    height:60px;
+    background:#2a2828;
+    border-top:1px solid #2a2828;
+    border-bottom:1px solid #2a2828;
+    padding:0 20px;
+    display:flex;
+    align-items: center;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.filters::-webkit-scrollbar{
+    display:none;
+}
+.filter-options{
+    flex:0 0 auto;
+    padding:10px 20px;
+    border-radius:50px;
+    background:#2a2828;
+    text-transform: capitaize;
+    margin-right:10px;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+.filter-options.active{
+    color:#242424;
+    background:#fff;
+}
+
+/* -------------videos container styling -----------*/
+.video-container{
+    /* background: #2a2828; */
+    width:calc(100% - 250px);
+    margin-top: 139px;
+    margin-left: 250px;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(4, 25%);
+    grid-gap:20px 5px;
+    overflow-x:hidden;
+}
+.video{
+    /* width:390px; */
+    min-height:250px;
+    height:auto;
+    background:whitesmoke;
+    margin-right: 13px;
+}
+.thumbnail{
+    width:100%;
+    height:150px;
+}
+.content{
+    width:100%;
+    height:100px;
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+}
+.channel-icon{
+    object-fit: cover;
+    margin-right:10px;
+}
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.channel-name{
+    font-size: 12px;
+    margin: 2px 0;
+    color: #979797;
+}
+
+@media(max-width:900px){
+    /* .toggle-btn{
+        display:none;
+    } */
+    .right-side{
+        flex-basis:100%;
+    }
+    .links img{
+        display:none;
+    }
+    .video-container{
+        width:100%;
+        padding-left:5%;
+        padding-right: 5%;
+    }
+    .user-dp img{
+        display:block;
+        width:30px;
+    }
+    .user-options{
+        display:none;
+    }
+    .search-box input{
+        width:100px;
+    }
+
+
+}
+@media (max-width: 768px){
+   .video-container{
+         width: 100%;
+        height: auto; 
+        display: block;
+   }
+    .video{
+        width: 100%;
+        height: auto;  
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
